@@ -10,7 +10,7 @@ function App() {
     { id: 2, name: 'Shawlpur', category: 'Visual System' },
     { id: 3, name: 'Laleen Beauty', category: 'Creative Direction' },
     { id: 4, name: 'Foreign Cloth House', category: 'Brand Identity' },
-    { id: 5, name: 'Smile Designers', category: 'Visual Identity' },
+    { id: 5, name: 'AT. Associates', category: 'Visual Identity' },
   ];
 
   const services = [
@@ -35,7 +35,7 @@ function App() {
     {
       quote: "Working with Arbaz was transformative. He doesn't just design — he builds brands with meaning and purpose.",
       author: "Dr. Fatima Khan",
-      company: "Smile Designers"
+      company: "AT. Associates"
     }
   ];
 
@@ -164,7 +164,7 @@ function App() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20 pt-32">
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="space-y-8">
             <div className="space-y-2 opacity-0 animate-fadeIn" style={{ animation: 'fadeIn 1s ease-out forwards' }}>
               <p className="text-[#72533e] uppercase tracking-[0.3em] text-sm accent-text">Creative Director</p>
@@ -186,19 +186,68 @@ function App() {
       </section>
 
       {/* Introduction */}
-      <section id="about" className="px-6 md:px-12 lg:px-24 py-20 border-t border-[#72533e]/20">
+      <section id="about" className="px-6 md:px-12 lg:px-24 py-32 border-t border-[#72533e]/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-12 gap-12">
-            <div className="md:col-span-4">
-              <p className="text-[#72533e] uppercase tracking-[0.2em] text-xs accent-text">About</p>
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="order-2 lg:order-1 space-y-8">
+              <div>
+                <p className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+                  I design for impact,<br />not for noise.
+                </p>
+              </div>
+
+              <div className="space-y-6 text-lg md:text-xl leading-relaxed text-[#ced1ca]/90">
+                <p>
+                  I started designing locally in Pakistan — working with small businesses, learning the hard way that great design isn't just what looks good. It's what <span className="text-[#72533e]">works</span>.
+                </p>
+                <p>
+                  Years later, I found myself creating brand systems for international clients in Qatar and Singapore. Not because I chased trends or played it safe — but because I stayed rooted in strategy, ethics, and depth.
+                </p>
+                <p>
+                  I don't follow the noise. I build brands with <span className="text-[#72533e]">timeless clarity</span>. No shortcuts. No fluff. Just honest, strategic creativity that earns trust and delivers results.
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-[#72533e]/20">
+                <p className="text-sm uppercase tracking-wider text-[#72533e] mb-4 accent-text">By the Numbers</p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-3xl md:text-4xl font-light text-[#72533e]">4,000+</p>
+                    <p className="text-sm text-[#ced1ca]/60 mt-1">Illustrations for global EdTech brand</p>
+                  </div>
+                  <div>
+                    <p className="text-3xl md:text-4xl font-light text-[#72533e]">250K+</p>
+                    <p className="text-sm text-[#ced1ca]/60 mt-1">Organic impressions generated</p>
+                  </div>
+                  <div>
+                    <p className="text-3xl md:text-4xl font-light text-[#72533e]">50%</p>
+                    <p className="text-sm text-[#ced1ca]/60 mt-1">ROI increase for Shawlpur</p>
+                  </div>
+                  <div>
+                    <p className="text-3xl md:text-4xl font-light text-[#72533e]">40%</p>
+                    <p className="text-sm text-[#ced1ca]/60 mt-1">Cost reduction through process design</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-8">
+                <p className="text-xl md:text-2xl font-light leading-relaxed italic text-[#ced1ca]/80">
+                  My goal is to help ethical, ambitious brands look and feel unforgettable.
+                </p>
+              </div>
             </div>
-            <div className="md:col-span-8">
-              <p className="text-xl md:text-2xl font-light leading-relaxed">
-                I'm a brand identity designer with <span className="text-[#72533e]">10+ years of creative experience</span> who helps ethical, culturally-rooted, and purpose-driven brands build visual systems that reflect their values — not just aesthetics.
-              </p>
-              <p className="text-lg md:text-xl font-light leading-relaxed mt-6 text-[#ced1ca]/70">
-                My focus is on minimal, premium, principle-aligned design. I love to work on meaningful, market-ready brands that want to stay true to tradition, culture, and clarity.
-              </p>
+
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <div className="aspect-[3/4] bg-[#72533e]/10 rounded-sm overflow-hidden border border-[#72533e]/20">
+                  <img
+                    src="/2021_02_24_07_44_IMG_255.png"
+                    alt="Arbaz K. Yousafzay"
+                    className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-[#72533e]/30 rounded-sm -z-10"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,30 +262,47 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="group relative aspect-[4/3] bg-[#72533e]/10 border border-[#72533e]/20 overflow-hidden cursor-pointer transition-all duration-500 hover:border-[#72533e]"
-                onMouseEnter={() => setHoveredProject(project.id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                <div className={`absolute inset-0 bg-[#72533e]/0 transition-all duration-500 ${hoveredProject === project.id ? 'bg-[#72533e]/10' : ''}`} />
+            {projects.map((project, index) => {
+              const projectImages: Record<number, string> = {
+                0: '/Free Grid Wrinkled A3 Poster Mockup.jpg',
+                1: '/Canvas_Shopping_Bag_Mockup_1.jpg',
+                4: '/Hanging Wall Sign MockUp 4.jpg'
+              };
 
-                <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                  <div className="flex justify-between items-start">
-                    <span className="text-[#72533e] text-sm uppercase tracking-wider accent-text">{String(index + 1).padStart(2, '0')}</span>
-                    <ArrowUpRight
-                      className={`w-6 h-6 transition-all duration-500 ${hoveredProject === project.id ? 'translate-x-1 -translate-y-1 text-[#72533e]' : 'text-[#ced1ca]/40'}`}
-                    />
-                  </div>
+              return (
+                <div
+                  key={project.id}
+                  className="group relative aspect-[4/3] bg-[#72533e]/10 border border-[#72533e]/20 overflow-hidden cursor-pointer transition-all duration-500 hover:border-[#72533e]"
+                  onMouseEnter={() => setHoveredProject(project.id)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                >
+                  {projectImages[index] && (
+                    <>
+                      <img
+                        src={projectImages[index]}
+                        alt={project.name}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                      />
+                      <div className={`absolute inset-0 bg-[#0a0a0a]/40 transition-all duration-500 ${hoveredProject === project.id ? 'bg-[#0a0a0a]/20' : ''}`} />
+                    </>
+                  )}
 
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-light mb-2">{project.name}</h3>
-                    <p className="text-[#ced1ca]/60 text-sm uppercase tracking-wider">{project.category}</p>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                    <div className="flex justify-between items-start">
+                      <span className="text-[#72533e] text-sm uppercase tracking-wider accent-text">{String(index + 1).padStart(2, '0')}</span>
+                      <ArrowUpRight
+                        className={`w-6 h-6 transition-all duration-500 ${hoveredProject === project.id ? 'translate-x-1 -translate-y-1 text-[#72533e]' : 'text-[#ced1ca]/40'}`}
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="text-3xl md:text-4xl font-light mb-2">{project.name}</h3>
+                      <p className="text-[#ced1ca]/60 text-sm uppercase tracking-wider">{project.category}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -333,14 +399,14 @@ function App() {
               href="https://www.behance.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border border-[#72533e] text-[#72533e] hover:bg-[#72533e] hover:text-[#0a0a0a] transition-all duration-300 uppercase tracking-wider text-sm font-light inline-flex items-center justify-center gap-2 group"
+              className="px-8 py-4 border border-[#72533e] text-[#72533e] hover:bg-[#72533e] hover:text-[#0a0a0a] transition-all duration-300 uppercase tracking-wider text-sm font-light inline-flex items-center justify-center gap-2 group rounded-md"
             >
               View Full Portfolio
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
             <a
               href="mailto:contact@arbazyousafzay.com"
-              className="px-8 py-4 bg-[#72533e] text-[#0a0a0a] hover:bg-[#72533e]/90 transition-all duration-300 uppercase tracking-wider text-sm font-light inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-[#72533e] text-[#0a0a0a] hover:bg-[#72533e]/90 transition-all duration-300 uppercase tracking-wider text-sm font-light inline-flex items-center justify-center gap-2 rounded-md"
             >
               <Mail className="w-4 h-4" />
               Get In Touch
@@ -352,37 +418,49 @@ function App() {
       {/* Footer */}
       <footer className="px-6 md:px-12 lg:px-24 py-12 border-t border-[#72533e]/20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+            <div className="flex flex-col items-start">
               <p className="text-2xl font-light">Arbaz K. Yousafzay</p>
               <p className="text-sm text-[#ced1ca]/60 mt-1">Creative Director & Brand Identity Designer</p>
+              <img
+                src="/Social Kit 2-10.png"
+                alt="Signature"
+                className="mt-6 h-16 w-auto opacity-40"
+              />
             </div>
 
-            <div className="flex gap-8">
-              <a
-                href="https://www.behance.net"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider hover:text-[#72533e] transition-colors duration-300"
-              >
-                Behance
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider hover:text-[#72533e] transition-colors duration-300"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="https://contra.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider hover:text-[#72533e] transition-colors duration-300"
-              >
-                Contra
-              </a>
+            <div className="flex flex-col items-center gap-6">
+              <img
+                src="/Social Kit 2-11.png"
+                alt="Emblem"
+                className="h-24 w-auto"
+              />
+              <div className="flex gap-8">
+                <a
+                  href="https://www.behance.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm uppercase tracking-wider hover:text-[#72533e] transition-colors duration-300"
+                >
+                  Behance
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm uppercase tracking-wider hover:text-[#72533e] transition-colors duration-300"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://contra.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm uppercase tracking-wider hover:text-[#72533e] transition-colors duration-300"
+                >
+                  Contra
+                </a>
+              </div>
             </div>
           </div>
 
